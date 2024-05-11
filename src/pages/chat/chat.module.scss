@@ -1,0 +1,63 @@
+.message {
+   @apply flex items-end gap-4 mb-6;
+
+   .content {
+      @apply bg-white py-3 px-5 rounded mb-[10px] shadow-sm  min-w-[200px]  break-words   whitespace-pre-wrap max-w-[15rem] md:min-w-[270px] md:max-w-xl;
+   }
+
+   .info {
+      @apply flex items-center gap-2;
+   }
+
+   &.right {
+      @apply flex-row-reverse;
+
+      .content {
+         background-color: rgba(var(--theme-conversation-rgb), 0.23);
+         @apply self-end bg-opacity-30;
+      }
+
+      .info {
+         @apply flex-row-reverse;
+      }
+   }
+
+   .avatar {
+      @apply w-8 h-8;
+   }
+}
+
+.msg-reply {
+   @apply p-4 rounded border-l-2  flex items-center justify-between;
+   background-color: rgba(var(--theme-conversation-rgb), 0.1);
+   border-color: var(--theme-conversation-hex);
+
+   h4 {
+      @apply text-base font-semibold;
+      color: var(--theme-conversation-hex);
+   }
+}
+
+.accordion {
+   @apply text-base;
+
+   &-btn {
+      @apply flex items-center justify-between w-full p-4 rounded hover:bg-bs-gray-400 transition-all font-medium;
+
+      svg {
+         @apply w-5 h-5 transition-all;
+      }
+
+      &.active svg {
+         @apply rotate-180;
+      }
+   }
+
+   &-content {
+      @apply h-0 overflow-hidden transition-['height'] duration-300;
+
+      &.active {
+         @apply overflow-visible h-auto;
+      }
+   }
+}
