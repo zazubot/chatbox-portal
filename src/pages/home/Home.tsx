@@ -15,7 +15,7 @@ const Home: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "Doot Chat | Home";
+    document.title = "Zazu Chat | Home";
   }, []);
 
   return (tabCtx?.currentTab || chatCtx?.currentConversation) &&

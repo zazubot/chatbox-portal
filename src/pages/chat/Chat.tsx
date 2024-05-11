@@ -17,7 +17,7 @@ const Chat = () => {
   useConversation(id as string);
 
   useEffect(() => {
-    document.title = "Doot Chat | Message";
+    document.title = "Zazu Chat | Message";
   }, []);
 
   useEffect(() => {
